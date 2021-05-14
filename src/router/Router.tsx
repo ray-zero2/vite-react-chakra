@@ -20,6 +20,7 @@ export const Router: VFC = memo(() => {
           {HomeRoutes.map((route) => {
             return (
               <Route
+                key={route.path}
                 exact={route.exact}
                 path={`${url}${route.path}`}>
                 <HeaderLayout>{ route.children }</HeaderLayout>
